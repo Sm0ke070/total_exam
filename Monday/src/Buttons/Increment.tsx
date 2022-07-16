@@ -1,11 +1,8 @@
-import {useState} from "react";
-
 type IncrementType = {
     counter: number;
     changeCounter:()=>void;
     title:string
 }
-
 const Increment = (props: IncrementType) => {
     return (
         <div>

@@ -2,9 +2,7 @@ type ResetType={
     resetOutput:()=>void;
     counter:number;
     title:string
-
 }
-
 const Reset=(props:ResetType)=>{
     return(
         <div>

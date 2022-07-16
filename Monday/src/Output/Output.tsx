@@ -13,7 +13,3 @@ const Output = (props: OutputType) => {
 }
 
 export default Output;
-
-/*
-/!*className={maxValue ? style.maxValue:props.counter===5}
-{style.maxValue && <div className={style.maxValue}>{style.maxVa*!/lue}</div>}*/
