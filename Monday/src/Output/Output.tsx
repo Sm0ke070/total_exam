@@ -6,7 +6,7 @@ type OutputType = {
 
 const Output = (props: OutputType) => {
     return (
-        <div>
+        <div className={style.Output}>
             <p className={props.counter === 5 ? style.maxValue: style.minValue}>{props.counter}</p>
         </div>
     )

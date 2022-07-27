@@ -3,6 +3,8 @@ import './App.css';
 import Output from "./Output/Output";
 import Increment from "./Buttons/Increment";
 import Reset from "./Buttons/Reset";
+import style from "./App.module.css"
+import Set from "./Buttons/Set";
 
 
 function App() {
@@ -19,11 +21,26 @@ function App() {
         setCounter(0)
     }
     return (
-        <div className="App">
-            <Output counter={counter}/>
-            <Increment title={'Inc'} counter={counter} changeCounter={changeCounter}/>
-            <Reset title={'Res'} counter={counter} resetOutput={resetOutput}/>
+        <div className={style.App}>
+            <div className={style.counter}>
+                <Output counter={counter}/>
+                <div className={style.btn}>
+                    <Increment title={'inc'} counter={counter} maxValue={maxValue} changeCounter={changeCounter}/>
+                    <Reset title={'reset'} counter={counter} resetOutput={resetOutput}/>
+                    <Set title={'set'} counter={counter}/>
+                </div>
+            </div>
+            {/*------------------------------------------*/}
+            <div className={style.counter}>
+                <Output counter={counter}/>
+                <div className={style.btn}>
+                    <Increment title={'inc'} counter={counter} maxValue={maxValue} changeCounter={changeCounter}/>
+                    <Reset title={'reset'} counter={counter} resetOutput={resetOutput}/>
+                    <Set title={'set'} counter={counter}/>
+                </div>
+            </div>
         </div>
     );
 }
+
 export default App;

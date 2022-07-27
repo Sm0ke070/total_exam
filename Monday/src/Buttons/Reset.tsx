@@ -1,3 +1,5 @@
+import style from "./Btn.module.css"
+
 type ResetType={
     resetOutput:()=>void;
     counter:number;
@@ -5,8 +7,8 @@ type ResetType={
 }
 const Reset=(props:ResetType)=>{
     return(
-        <div>
-            <button onClick={props.resetOutput} disabled={props.counter===0}>
+        <div className={style.button}>
+            <button className={style.IncResSetBtn} onClick={props.resetOutput} disabled={props.counter===0}>
                 {props.title}
             </button>
         </div>
